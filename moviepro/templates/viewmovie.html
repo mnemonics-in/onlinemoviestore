@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body style="background-color:gray;>
+<div class="col-5 md">
+
+</div>
+<div class=" container card  col-4">
+  <img class="card-img-top" src="{{b.movieimage.url}}" alt="Card image cap" height="290px" width="50px">
+  <div class="card-body">
+    <h5 class="card-title">{{b.moviename}}</h5>
+    <p class="card-text"> {{b.moviedesp}}</p>
+    <p class="card-text"><small class="text-muted">{{b.movieyear}}</small></p>
+  </div>
+   <a href="{% url 'update' b.id %}" class="btn btn-warning">Update</a>
+  <div class="col-1">
+
+
+  </div>
+   <a href="{% url 'delete' b.id %}" class="btn btn-danger">Delete</a>
+</div>
+
+</body>
+{% endblock %}
+</html>

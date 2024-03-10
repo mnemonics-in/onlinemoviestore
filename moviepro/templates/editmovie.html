@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<body style="background-color:gray;>
+ <center><h3 class="mt-4">Update</h3></center>
+ <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+ {{form|crispy}}
+
+
+        <input type="submit">
+    </form>
+</center>
+
+
+</body>
+
+{% endblock %}
+</html>

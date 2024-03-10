@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<body style="background-color:gray;>
+<form method="POST">
+ {% csrf_token %}
+ <p>Are you sure you wantto delete???</p>
+ <input type="submit">
+</form>
+
+</body>
+{% endblock %}
+</html>
